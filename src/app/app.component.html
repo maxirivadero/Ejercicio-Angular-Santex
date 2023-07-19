@@ -1,0 +1,19 @@
+<div class="mostrar-listado">
+    <h1>Lista de Productos</h1>
+    <button mat-raised-button (click)="mostrarListado()">Mostrar/Ocultar Listado</button>
+    <div *ngIf="desplegar">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Costo</th>
+                </tr>
+            </thead>
+            <tbody><tr *ngFor="let producto of listado">
+                <td>{{ producto.nombre }}</td>
+                <td>{{ producto.costo }}</td>
+            </tr></tbody>            
+        </table>
+    </div>
+
+</div>
